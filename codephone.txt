@@ -1,0 +1,41 @@
+<html>
+<body>
+<div class="text-center col-offset-md-3 col-md-6 col-md-offset 3">
+  <table align="center class="table-condensed table-boarderd table-hover table-responsive>
+    <tr style="bacground-color: black">
+      <td>name</td>                 			//TABLE DECLARATION
+      <td>number</td>
+      <td>delete</td>
+    </tr>
+  <tr *ngfor='let n of number'>
+    <td>{{n.name}}</td>					//ENTRY IN TABLE
+    <td>{{n.num}}</td>
+  </tr>
+  </table>
+  
+</div>
+<div *ngIF='showform'>
+  <form>
+    <div class ="form-group">
+      <label for="name"></label>
+      <input type="text" name="name" class="form-control" [(ngModel="name")]>		//USER INPUT INTERFACE
+    </div>
+    <div class ="form-group">
+      <label for="name"></label>
+      <input type="text" name="num" class="form-control" [(ngModel="num")]>
+    </div>
+    <div >
+      <button type="button" class="btn btn-success"(click)='submit'> >submit</button>
+
+
+    </div>
+    <div class="">
+      name:{{name}}
+      <br>
+      number:{{num}}
+
+    </div>
+  </form>
+</div>
+</div>
+</body>
